@@ -13,8 +13,7 @@ services:
   suitecrm:
     image: 'bitnami/suitecrm:latest'
     ports:
-      - '80:80'
-      - '443:443'
+      - '3500:80'
     volumes:
       - 'suitecrm_data:/bitnami/suitecrm'
       - 'php_data:/bitnami/php'
