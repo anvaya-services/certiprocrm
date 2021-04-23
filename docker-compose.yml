@@ -23,8 +23,8 @@ services:
       - mariadb
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.automlvision-api.rule=Host(`certipro.anvaya.org`)"
-      - "traefik.http.routers.automlvision-api.entrypoints=websecure"
+      - "traefik.http.routers.certipro.rule=Host(`certipro.anvaya.org`)"
+      - "traefik.http.routers.certipro.entrypoints=websecure"
 
 volumes:
   mariadb_data:
