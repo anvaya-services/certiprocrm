@@ -10,19 +10,13 @@ services:
       - MARIADB_DATABASE=certiprocrm_database
     volumes:
       - 'mariadb_data:/bitnami/mariadb'
-  suitecrm:
-    image: 'bitnami/suitecrm:latest'
-    environment:
-      - ALLOW_EMPTY_PASSWORD=yes
-      - SUITECRM_DATABASE_USER=certiprosupport2021
-      - SUITECRM_DATABASE_PASSWORD=certiproandrea2021
-      - SUITECRM_DATABASE_NAME=certiprocrm_database
+  certiprocrm:
+    image: certiprocrm'
     ports:
       - '3500:80'
     volumes:
-      - 'suitecrm_data:/bitnami/suitecrm'
-      - 'php_data:/bitnami/php'
-      - 'apache_data:/bitnami/apache'
+      - ./logs/certiprocrm/php:/var/www/html/var/log:cached
+      - ./logs/certiprocrm/nginx:/var/log/nginx:cached
     depends_on:
       - mariadb
     labels:
