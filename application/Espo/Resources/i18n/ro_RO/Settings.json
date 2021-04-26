@@ -89,6 +89,10 @@
     "weekStart": {
       "0": "Duminică",
       "1": "Luni"
+    },
+    "currencyFormat": {
+      "1": "10 RON",
+      "2": "10 Lei"
     }
   },
   "tooltips": {
